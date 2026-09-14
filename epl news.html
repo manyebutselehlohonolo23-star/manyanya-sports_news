@@ -5,35 +5,29 @@
 <head>
 
     <meta charset="utf-8">
-    <meta charset="utf-8">
-    <meta name="Viewport" content="width=device-width,initial-scale=1" >
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>EPL NEW SIGNINGS</title>
 
-    <style type="text/css">
-        body{
-            background-color: red; 
-        }
+    <style>
 
-        @media(max-width: 400px){
-            body{
-                background-color: yellow;
-            }
+        * {
+            box-sizing: border-box;
         }
 
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-image: url("logo2.jpg");
+            background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url("logo2.jpg");
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
             background-attachment: fixed;
+            color: #222;
         }
 
-        
         .navbar {
-            background-color: rgba(0, 0, 0, 0.9);
+            background-color: rgba(10, 10, 10, 0.95);
             padding: 15px;
             text-align: right;
         }
@@ -42,11 +36,13 @@
             background-color: white;
             color: black;
             text-decoration: none;
-            padding: 10px 20px;
-            margin-right: 10px;
-            border-radius: 5px;
+            padding: 9px 16px;
+            margin-right: 8px;
+            border-radius: 20px;
             font-weight: bold;
+            font-size: 13px;
             display: inline-block;
+            transition: 0.3s;
         }
 
         .navbar a:hover {
@@ -55,47 +51,51 @@
         }
 
         h1 {
-            background-color: white;
-            color: black;
+            background: linear-gradient(90deg, #111111, #c8102e, #111111);
+            color: white;
             text-align: center;
-            padding: 20px;
+            padding: 25px 15px;
             margin: 0;
+            font-size: 38px;
+            letter-spacing: 3px;
         }
 
         h2 {
             color: white;
             text-align: center;
-            background-color: rgba(0, 0, 0, 0.7);
-            padding: 15px;
+            background-color: rgba(10, 10, 10, 0.85);
+            padding: 18px;
+            margin: 0;
+            font-size: 22px;
+            letter-spacing: 1px;
         }
 
-        .defence-container {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            margin-top: 30px;
-        }
-
+        .defence-container,
         .attack-container {
             display: flex;
             justify-content: center;
+            align-items: stretch;
             gap: 30px;
-            margin-top: 30px;
+            padding: 35px 25px;
+            max-width: 1400px;
+            margin: auto;
         }
 
         .player {
-            background-color: rgba(255, 255, 255, 0.95);
+            background-color: rgba(255, 255, 255, 0.97);
             width: 30%;
-            padding: 15px;
+            padding: 12px;
             text-align: center;
             border-radius: 15px;
-            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.45);
+            border-top: 5px solid #c8102e;
             transition: 0.3s;
+            overflow: hidden;
         }
 
         .player:hover {
-            transform: translateY(-10px);
-            box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.7);
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
         }
 
         .player img {
@@ -103,29 +103,37 @@
             height: 400px;
             object-fit: cover;
             border-radius: 10px;
+            display: block;
         }
 
         .player p {
             font-size: 20px;
             font-weight: bold;
             color: #c8102e;
-            margin: 15px 0;
+            margin: 18px 5px 10px;
         }
 
         .section-title {
             text-align: center;
             color: white;
-            background-color: rgba(0, 0, 0, 0.75);
-            padding: 15px;
-            margin-top: 50px;
+            background: linear-gradient(90deg, rgba(0,0,0,0.9), rgba(200,16,46,0.9), rgba(0,0,0,0.9));
+            padding: 18px;
+            margin: 15px 0 0;
+            font-size: 22px;
         }
 
         footer {
-            background-color: rgba(0, 0, 0, 0.8);
+            background-color: #111111;
             color: white;
             text-align: center;
-            padding: 20px;
-            margin-top: 50px;
+            padding: 30px 15px;
+            margin-top: 25px;
+            border-top: 4px solid #c8102e;
+        }
+
+        footer p {
+            margin: 8px;
+            color: #cccccc;
         }
 
         @media (max-width: 900px) {
@@ -138,6 +146,73 @@
 
             .player {
                 width: 80%;
+                max-width: 550px;
+            }
+
+            .player img {
+                height: 400px;
+            }
+
+        }
+
+        @media (max-width: 600px) {
+
+            body {
+                background-attachment: scroll;
+            }
+
+            .navbar {
+                padding: 12px;
+            }
+
+            .navbar a {
+                padding: 8px 14px;
+                margin-right: 5px;
+                font-size: 13px;
+            }
+
+            h1 {
+                font-size: 27px;
+                padding: 20px 10px;
+                letter-spacing: 2px;
+            }
+
+            h2 {
+                font-size: 18px;
+                padding: 15px 10px;
+            }
+
+            .defence-container,
+            .attack-container {
+                padding: 20px 15px;
+                gap: 20px;
+            }
+
+            .player {
+                width: 100%;
+                max-width: 500px;
+                padding: 10px;
+            }
+
+            .player img {
+                width: 100%;
+                height: auto;
+                max-height: 450px;
+                object-fit: cover;
+            }
+
+            .player p {
+                font-size: 18px;
+            }
+
+            .section-title {
+                font-size: 18px;
+                padding: 15px 10px;
+            }
+
+            footer {
+                font-size: 13px;
+                padding: 25px 10px;
             }
 
         }
@@ -152,20 +227,17 @@
 
         <a href="index.html">home</a>
 
-        <a href="laliganews.html">news</a>
+        <a href="laliganews.html">about</a>
 
     </div>
-
 
     <h1>
         LIVERPOOL FC
     </h1>
 
-
     <h2>
         Liverpool New Defence Signings
     </h2>
-
 
     <div class="defence-container">
 
@@ -179,7 +251,6 @@
 
         </div>
 
-
         <div class="player">
 
             <img src="go.jpg">
@@ -192,11 +263,9 @@
 
     </div>
 
-
     <h2 class="section-title">
         Victor Munoz To Partner With Rio And Gakpo
     </h2>
-
 
     <div class="attack-container">
 
@@ -210,7 +279,6 @@
 
         </div>
 
-
         <div class="player">
 
             <img src="gakpo.jpg">
@@ -220,7 +288,6 @@
             </p>
 
         </div>
-
 
         <div class="player">
 
@@ -234,7 +301,6 @@
 
     </div>
 
-
     <footer>
 
         <p>
@@ -246,7 +312,6 @@
         </p>
 
     </footer>
-
 
 </body>
 
