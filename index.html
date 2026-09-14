@@ -1,141 +1,398 @@
+```html
+<!DOCTYPE html>
+<html>
+
 <head>
-	<title>EPL NEW SIGNINGS</title>
 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>EPL NEW SIGNINGS</title>
 
+    <style>
 
-    
+        * {
+            box-sizing: border-box;
+        }
 
-	<h1 style="background-color:white;color:black;text-align:center;">
-		Liverpool Eyeing Psg Star!
-	</h1>
-	<h2>Season soon to start,will they pull up in the last minutes?</h2>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f1f1f1;
+            color: #222;
+        }
 
-	<body>
-		<style type="text/css">
-			body{
-				margin: 0;
-                font-family: Arial, sans-serif;
-                background-color: red;
-			}
+        header {
+            background: linear-gradient(135deg, #111111, #c8102e);
+            color: white;
+            padding: 30px 20px 25px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 42px;
+            letter-spacing: 2px;
+            font-weight: 800;
+        }
+
+        header h2 {
+            margin: 10px 0 0;
+            font-size: 17px;
+            font-weight: normal;
+            color: #eeeeee;
+        }
+
+        .navbar {
+            background-color: #111111;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 20px;
+            flex-wrap: wrap;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 14px;
+            border: 1px solid #555;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 13px;
+            text-transform: lowercase;
+            transition: 0.3s;
+        }
+
+        .navbar a:hover {
+            background-color: #c8102e;
+            border-color: #c8102e;
+            transform: translateY(-2px);
+        }
+
+        .section-title {
+            text-align: center;
+            margin: 35px 0 10px;
+        }
+
+        .section-title h3 {
+            margin: 0;
+            color: #111111;
+            font-size: 28px;
+        }
+
+        .section-title p {
+            color: #777;
+            margin-top: 8px;
+        }
+
+        .news-container {
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            gap: 25px;
+            padding: 25px;
+            max-width: 1400px;
+            margin: auto;
+        }
+
+        .one,
+        .two,
+        .three {
+            background-color: white;
+            width: 33.33%;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.12);
+            transition: 0.3s;
+            border-top: 5px solid #c8102e;
+        }
+
+        .one:hover,
+        .two:hover,
+        .three:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.18);
+        }
+
+        .one img,
+        .two img,
+        .three img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .one p,
+        .two p,
+        .three p {
+            padding: 0 20px;
+            line-height: 1.7;
+            font-size: 15px;
+            color: #555;
+        }
+
+        .one p:first-of-type,
+        .two p:first-of-type,
+        .three p:first-of-type {
+            margin-top: 20px;
+        }
+
+        .card-label {
+            display: inline-block;
+            margin: 20px 20px 5px;
+            padding: 5px 12px;
+            background-color: #c8102e;
+            color: white;
+            border-radius: 15px;
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        footer {
+            background-color: #111111;
+            color: white;
+            text-align: center;
+            margin-top: 40px;
+            padding: 30px 20px;
+        }
+
+        footer h3 {
+            margin: 0 0 10px;
+            color: #c8102e;
+            letter-spacing: 1px;
+        }
+
+        footer p {
+            margin: 6px;
+            color: #bbbbbb;
+            font-size: 14px;
+        }
+
+        @media (max-width: 900px) {
+
+            header h1 {
+                font-size: 34px;
+            }
 
             .news-container {
-                             display: flex;
-                             flex-direction: row;
-                             justify-content: center;
-                             gap: 25px;
-                            padding: 20px;
-                        }
+                gap: 15px;
+                padding: 15px;
+            }
 
             .one,
             .two,
             .three {
-                     background-color: white;
-                     width: 30%;
-                     min-height: 500px;
-                     padding: 15px;
-                     border-radius: 15px;
+                width: 33.33%;
             }
 
-            footer {
-                    background-color: navajowhite;
-                    color: black;
-                    text-align: center;
-                    width: 80%;
-                    margin: 30px auto;
-                    padding: 20px;
-                    border-radius: 10px;
+            .one img,
+            .two img,
+            .three img {
+                height: 220px;
             }
 
-            .NEXT {
-                    position: absolute;
-                    top: 900px;
-                    right: 740px;
-                    background-color: white;
-                    color: #c8102e;
-                    padding: 10px 20px;
-                    text-decoration: none;
-                    font-weight: bold;
-                    border-radius: 8px;
+            .one p,
+            .two p,
+            .three p {
+                padding: 0 15px;
+                font-size: 14px;
             }
 
-           .NEXT:hover {
-                        background-color: black;
-                        color: white;
+        }
+
+        @media (max-width: 600px) {
+
+            header {
+                padding: 25px 15px;
+            }
+
+            header h1 {
+                font-size: 27px;
+                letter-spacing: 1px;
+            }
+
+            header h2 {
+                font-size: 15px;
+                line-height: 1.5;
             }
 
             .navbar {
-                     position: absolute;
-                     top: 50px;
-                     right: 20px;
-
-                     display: flex;
-                     gap: 10px;
+                justify-content: flex-end;
+                padding: 12px 15px;
+                gap: 6px;
             }
 
             .navbar a {
-                       background-color: white;
-                       color: black;
-                       text-decoration: none;
-                       padding: 10px 18px;
-                       border-radius: 8px;
-                       font-weight: bold;
+                padding: 8px 12px;
+                font-size: 12px;
             }
 
-            .navbar a:hover {
-                             background-color: black;
-                             color: white;
+            .section-title {
+                margin: 25px 10px 5px;
             }
 
-		</style>
+            .section-title h3 {
+                font-size: 23px;
+            }
 
-        <div class ="news-container"/>
+            .section-title p {
+                font-size: 14px;
+            }
 
+            .news-container {
+                flex-direction: column;
+                align-items: center;
+                padding: 15px;
+                gap: 20px;
+            }
 
+            .one,
+            .two,
+            .three {
+                width: 100%;
+                max-width: 500px;
+            }
 
-		<div class="one">
-			<img src="l.jpg" height="300px" width="450px"/>
-			<p>Former French manager Claude le Roy publicly claimed after a discussion</p>
-			<p> with Barcola that the forward does not actively appear to want to leave the</p>
-			<p> French capital, conflicting with widespread transfer speculation linking</p>
-		    <p>him to the Premier League.</p>
-		</div>
+            .one img,
+            .two img,
+            .three img {
+                width: 100%;
+                height: auto;
+                min-height: 200px;
+                max-height: 300px;
+                object-fit: cover;
+            }
 
-		<div class="two">
-			<img src="n.jpg" height="300px" width="450px">
-			<p>Paris Saint-Germain has reportedly attached a massive price tag,</p>
-			<p> with figures ranging from £120 million up to staggering valuations near</p>
-			<p> £145 million, leaving clubs apart on an agreement.</p>
-		</div>
-		<div class="three">
-			<img src="bar.jpg" height="300px" width="450px">
-			<p>RMC Sport note that the player is open to an exit and favors a switch</p>
-			<p> to Liverpool Football Club after declining to extend his contract past</p>
-			<p> 2028 at PSG.RMC Sport note that the player is open to an exit and</p>
-			<p> favors a switch to Liverpool Football Club after declining to extend his</p>
-			<p> contract past 2028 at PSG.</p>
-		</div>
+            .one p,
+            .two p,
+            .three p {
+                font-size: 15px;
+                line-height: 1.6;
+                padding: 0 18px;
+            }
 
-        <div class="navbar">
-            .
+            footer {
+                margin-top: 25px;
+                padding: 25px 15px;
+            }
 
-            <a href="index.html">home</a>
+        }
 
-            <a href="epl news.html">news</a>
- 
-            <a href="laligaNews.html">about</a>
+    </style>
 
-        </div>
+</head>
 
+<body>
 
+    <header>
+
+        <h1>LIVERPOOL EYEING PSG STAR!</h1>
+
+        <h2>
+            Season soon to start — will they pull it off in the final minutes?
+        </h2>
+
+    </header>
+
+    <div class="navbar">
+
+        <a href="index.html">home</a>
+
+        <a href="epl news.html">news</a>
+
+        <a href="laliganews.html">about</a>
 
     </div>
 
-		
-        <footer>
+    <div class="section-title">
 
-            <p>&copy; 2026 EPL NEW SIGNINGS</p>
-            <p>ALL Rights Reserved | Liverpool Football News</p>
-        </footer>
-	</body>
-</head>
+        <h3>Latest Transfer News</h3>
+
+        <p>
+            All the latest updates from the football transfer market
+        </p>
+
+    </div>
+
+    <div class="news-container">
+
+        <div class="one">
+
+            <img src="l.jpg" alt="PSG Player">
+
+            <span class="card-label">
+                Transfer News
+            </span>
+
+            <p>
+                Former French manager Claude le Roy publicly claimed after a
+                discussion with Barcola that the forward does not actively
+                appear to want to leave the French capital, conflicting with
+                widespread transfer speculation linking him to the Premier League.
+            </p>
+
+        </div>
+
+        <div class="two">
+
+            <img src="n.jpg" alt="PSG Transfer News">
+
+            <span class="card-label">
+                Transfer Update
+            </span>
+
+            <p>
+                Paris Saint-Germain has reportedly attached a massive price tag,
+                with figures ranging from £120 million up to staggering
+                valuations near £145 million, leaving clubs apart on an agreement.
+            </p>
+
+        </div>
+
+        <div class="three">
+
+            <img src="bar.jpg" alt="Liverpool Transfer News">
+
+            <span class="card-label">
+                Liverpool
+            </span>
+
+            <p>
+                RMC Sport note that the player is open to an exit and favors
+                a switch to Liverpool Football Club after declining to extend
+                his contract past 2028 at PSG.
+            </p>
+
+            <p>
+                The player is reportedly considering his options as Liverpool
+                continue to monitor the situation.
+            </p>
+
+        </div>
+
+    </div>
+
+    <footer>
+
+        <h3>
+            EPL NEW SIGNINGS
+        </h3>
+
+        <p>
+            &copy; 2026 EPL NEW SIGNINGS
+        </p>
+
+        <p>
+            All Rights Reserved | Liverpool Football News
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
+```
