@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 
@@ -18,19 +17,20 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background: #f3f6fa;
+            background: #f3f3f3;
             color: #222;
         }
 
+        /* NAVBAR */
         .navbar {
-            background-color: #172554;
+            background-color: #c8102e;
             padding: 15px;
             text-align: right;
         }
 
         .navbar a {
             background-color: white;
-            color: #172554;
+            color: #c8102e;
             text-decoration: none;
             font-weight: bold;
             font-size: 13px;
@@ -42,12 +42,13 @@
         }
 
         .navbar a:hover {
-            background-color: #172554;
+            background-color: #8b0000;
             color: white;
         }
 
+        /* MAIN TITLE */
         h1 {
-            background: #172554;
+            background: #c8102e;
             color: white;
             text-align: center;
             padding: 28px 20px;
@@ -56,8 +57,9 @@
             letter-spacing: 1px;
         }
 
+        /* SUBTITLE */
         h2 {
-            background-color: #172554;
+            background-color: #8b0000;
             color: white;
             text-align: center;
             padding: 18px;
@@ -66,6 +68,7 @@
             font-weight: normal;
         }
 
+        /* TABLE */
         table {
             width: 60%;
             margin: 35px auto;
@@ -73,11 +76,11 @@
             background-color: white;
             border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 6px 20px rgba(23, 37, 84, 0.15);
+            box-shadow: 0 6px 20px rgba(200, 16, 46, 0.15);
         }
 
         th {
-            background: #172554;
+            background: #c8102e;
             color: white;
             padding: 16px;
             font-size: 16px;
@@ -91,9 +94,10 @@
         }
 
         tr:hover td {
-            background-color: #e8eefc;
+            background-color: #ffe5e8;
         }
 
+        /* NEWS CONTAINER */
         .news-container {
             display: flex;
             justify-content: center;
@@ -104,23 +108,24 @@
             margin: auto;
         }
 
+        /* NEWS BOXES */
         .news-box {
             background-color: white;
             width: 30%;
             padding: 20px;
             border-radius: 15px;
-            box-shadow: 0 7px 20px rgba(23, 37, 84, 0.15);
+            box-shadow: 0 7px 20px rgba(200, 16, 46, 0.15);
             transition: 0.3s;
-            border-top: 5px solid #172554;
+            border-top: 5px solid #c8102e;
         }
 
         .news-box:hover {
             transform: translateY(-8px);
-            box-shadow: 0 14px 28px rgba(23, 37, 84, 0.22);
+            box-shadow: 0 14px 28px rgba(200, 16, 46, 0.22);
         }
 
         .news-box h3 {
-            background: #172554;
+            background: #c8102e;
             color: white;
             text-align: center;
             padding: 13px;
@@ -139,24 +144,26 @@
         }
 
         .news-box li::marker {
-            color: #172554;
+            color: #c8102e;
         }
 
+        /* FOOTER */
         footer {
-            background-color: #172554;
+            background-color: #c8102e;
             color: white;
             text-align: center;
             padding: 30px 15px;
             margin-top: 35px;
-            border-top: 4px solid #172554;
+            border-top: 4px solid #8b0000;
         }
 
         footer p {
             margin: 8px;
-            color: #dbe4ff;
+            color: white;
             font-size: 14px;
         }
 
+        /* TABLET */
         @media (max-width: 900px) {
 
             .news-container {
@@ -179,6 +186,7 @@
 
         }
 
+        /* MOBILE */
         @media (max-width: 600px) {
 
             .navbar {
